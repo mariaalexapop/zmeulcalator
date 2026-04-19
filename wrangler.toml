@@ -1,0 +1,6 @@
+name = "zmeulcalator"
+compatibility_date = "2024-01-01"
+
+# Cloudflare Pages static asset serving
+[assets]
+directory = "./public"

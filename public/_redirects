@@ -1,0 +1,5 @@
+# Redirect old WordPress feed URLs
+/feed/* /index.html 301
+/xmlrpc.php /index.html 301
+/wp-admin/* /index.html 301
+/wp-login* /index.html 301

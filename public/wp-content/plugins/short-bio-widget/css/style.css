@@ -1,0 +1,20 @@
+.social-icon{
+    margin-right: 5px;
+}
+
+#bio-image{
+    display: block;
+    text-align: center;
+}
+
+#bio-full-name{
+    text-align: center;
+}
+
+#bio-brief-detail{
+    text-align: center;
+}
+
+#bio-social-icons{
+    text-align: center;
+}
