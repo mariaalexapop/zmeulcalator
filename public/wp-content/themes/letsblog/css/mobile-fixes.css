@@ -1,0 +1,304 @@
+/* Mobile responsiveness fixes for zmeulcalator static clone */
+
+/* ===== 1. Force all fixed-width containers to be responsive ===== */
+#wrapper,
+.footer_bar,
+.top_bar,
+.above_top_bar,
+.header_style_wrapper,
+.standard_wrapper,
+.footer_bar_wrapper,
+#footer ul.sidebar_widget,
+.gallery_mansory_wrapper,
+#portfolio_filter_wrapper {
+  max-width: 1150px;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.header_style_wrapper {
+  left: 0 !important;
+  margin-left: 0 !important;
+}
+
+#menu_wrapper,
+#page_content_wrapper .inner,
+.page_content_wrapper .inner,
+.page_content_wrapper,
+#page_content_wrapper {
+  max-width: 960px;
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+#page_content_wrapper .inner,
+.page_content_wrapper .inner {
+  padding: 0 20px;
+}
+
+/* ===== 2. Force all images to be responsive ===== */
+img {
+  max-width: 100%;
+  height: auto !important;
+}
+
+.post_img img,
+.post_content img,
+.post img,
+article img,
+.entry-content img,
+.wp-caption img,
+.gallery-item img {
+  max-width: 100% !important;
+  width: auto !important;
+  height: auto !important;
+}
+
+iframe,
+embed,
+video,
+object {
+  max-width: 100%;
+}
+
+/* ===== 3. Fix viewport zoom ===== */
+/* Note: maximum-scale=1 removed via HTML edit */
+
+/* ===== 4. Tablet fixes (768px - 960px) ===== */
+@media only screen and (max-width: 960px) {
+  #menu_wrapper,
+  #page_content_wrapper .inner,
+  .page_content_wrapper .inner,
+  .footer_bar_wrapper,
+  #footer ul.sidebar_widget {
+    width: 100% !important;
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+
+  .sidebar_content {
+    width: 100% !important;
+    float: none !important;
+  }
+
+  .sidebar_wrapper {
+    width: 100% !important;
+    float: none !important;
+    margin-left: 0 !important;
+    margin-top: 30px;
+  }
+
+  /* Hide desktop menu, show mobile menu toggle */
+  #menu_wrapper .nav,
+  #nav_wrapper {
+    display: none !important;
+  }
+
+  #mobile_nav_icon {
+    display: block !important;
+  }
+
+  /* Post grid - 2 columns on tablet */
+  .sidebar_content.two_cols .post.type-post,
+  .sidebar_content.three_cols .post.type-post {
+    width: 48% !important;
+  }
+}
+
+/* ===== 5. Mobile fixes (<768px) ===== */
+@media only screen and (max-width: 767px) {
+  /* Full-width containers */
+  #page_content_wrapper .inner,
+  .page_content_wrapper .inner {
+    padding: 0 15px;
+  }
+
+  /* Stack post grid to single column */
+  .sidebar_content.two_cols .post.type-post,
+  .sidebar_content.three_cols .post.type-post,
+  .sidebar_content .post.type-post {
+    width: 100% !important;
+    float: none !important;
+    clear: both !important;
+    margin-right: 0 !important;
+  }
+
+  /* Post titles */
+  .post_header h5,
+  .post_header h3,
+  .post_header h4,
+  body.single-post .post_header_title h1 {
+    font-size: 18px !important;
+    line-height: 1.3 !important;
+  }
+
+  /* Page caption */
+  #page_caption h1 {
+    font-size: 22px !important;
+    letter-spacing: 1px !important;
+  }
+
+  #page_caption {
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
+  }
+
+  /* Sidebar full width */
+  .sidebar_content {
+    width: 100% !important;
+    float: none !important;
+  }
+
+  .sidebar_wrapper {
+    width: 100% !important;
+    float: none !important;
+    margin-left: 0 !important;
+    margin-top: 20px;
+  }
+
+  /* Footer */
+  .footer_bar_wrapper,
+  #footer ul.sidebar_widget {
+    padding: 0 15px !important;
+  }
+
+  #footer ul.sidebar_widget li {
+    width: 100% !important;
+    float: none !important;
+    margin-bottom: 20px;
+  }
+
+  /* Logo */
+  #logo_normal img {
+    max-width: 200px !important;
+    height: auto !important;
+  }
+
+  /* Social icons in header */
+  .social_wrapper {
+    display: none;
+  }
+
+  /* Related posts */
+  .post_related {
+    width: 100% !important;
+    float: none !important;
+    margin-bottom: 15px;
+  }
+
+  #post_more_wrapper .post_related {
+    width: 100% !important;
+  }
+
+  /* Comment form */
+  .comment .left,
+  .comment .right {
+    width: 100% !important;
+    float: none !important;
+  }
+
+  #respond input[type="text"],
+  #respond input[type="email"],
+  #respond input[type="url"],
+  #respond textarea {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Tables */
+  table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Blockquotes */
+  blockquote {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    padding: 15px !important;
+  }
+}
+
+/* ===== 6. Small mobile fixes (<480px) ===== */
+@media only screen and (max-width: 480px) {
+  /* Mobile menu responsive width */
+  .mobile_menu_wrapper {
+    width: calc(100vw - 20px) !important;
+    max-width: 360px;
+    padding: 20px !important;
+    box-sizing: border-box;
+    transform: translate(calc(100vw - 20px), 0px);
+  }
+
+  .mobile_menu_wrapper.open {
+    transform: translate(0px, 0px);
+  }
+
+  /* Smaller logo on tiny screens */
+  #logo_normal img {
+    max-width: 160px !important;
+  }
+
+  /* Post title sizing */
+  .post_header h5,
+  .post_header h3 {
+    font-size: 16px !important;
+  }
+
+  body.single-post .post_header_title h1 {
+    font-size: 20px !important;
+  }
+
+  #page_caption h1 {
+    font-size: 18px !important;
+  }
+
+  /* Search autocomplete */
+  #autocomplete {
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* Dropdown menus */
+  #menu_wrapper .nav ul li ul {
+    width: 100% !important;
+    max-width: 210px;
+  }
+}
+
+/* ===== 7. Frame borders - hide on mobile for more space ===== */
+@media only screen and (max-width: 767px) {
+  .frame_top,
+  .frame_bottom,
+  .frame_left,
+  .frame_right {
+    display: none !important;
+  }
+}
+
+/* ===== 8. Social share buttons responsive ===== */
+#social_share_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+/* ===== 9. Gallery responsive ===== */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.gallery-item {
+  flex: 1 1 auto;
+  min-width: 120px;
+}
+
+@media only screen and (max-width: 480px) {
+  .gallery-item {
+    min-width: 100px;
+    width: 48% !important;
+  }
+}
